@@ -1,11 +1,7 @@
 import "./styles.css";
 
 document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use Parcel to bundle this sandbox, you can find more info about Parcel
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
+<h1> JavaScript Object Sort </h1>
 `;
 
 var str = "pp11pankaj_702";
@@ -43,4 +39,45 @@ dairectchat.find(function(element) {
   element.user_id == myInt ? (element.login_status = 0) : "";
 });
 
-for (var i = 0; i < dairectchat.length; i++) {}
+var newObj = [];
+
+for (var i = 0; i < dairectchat.length; i++) {
+  newObj = dairectchat;
+}
+
+dairectchat.sort(function(a, b) {
+  var myA = a.login_status,
+    myB = b.login_status;
+
+  if (myA < myB) {
+    return -1;
+  } else {
+    return 1;
+  }
+  return 0;
+});
+
+// newObj = dairectchat;
+
+var done = false;
+
+setInterval(function() {
+  done = true;
+}, 5000);
+
+if (done) {
+  console.log("heheh" + done);
+  done = false;
+}
+
+dairectchat.map(function(entry) {
+  entry.log_status = 1;
+  return entry;
+});
+
+dairectchat.map(function(entry) {
+  entry.log_status = 1;
+  return entry;
+});
+
+console.table(newObj);
