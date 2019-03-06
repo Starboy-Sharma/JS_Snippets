@@ -81,3 +81,34 @@ dairectchat.map(function(entry) {
 });
 
 console.table(newObj);
+
+// Push data in an array of object at every index on condition base
+const data = [
+  {
+    user_id: 692,
+    name: "Pankaj Sharma",
+    email: "pankaj@proprofs"
+  },
+
+  {
+    user_id: 680,
+    name: "Sumit",
+    email: "sumit@proprofs"
+  },
+
+  {
+    user_id: 696,
+    name: "Shivam Verma",
+    email: "shivam@proprofs"
+  }
+];
+
+const id = 692;
+
+data.forEach((el, index) => {
+  if (el.user_id == id) {
+    data[index].isAdmin = 1; 
+  } else {
+    data[index].isAdmin = 0;
+  }
+});
