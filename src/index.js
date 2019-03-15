@@ -112,3 +112,17 @@ data.forEach((el, index) => {
     data[index].isAdmin = 0;
   }
 });
+
+
+
+// If you have two array of object like
+// var a = [ { 'id': 1, 'name': 'Pankaj Sharma' }, { 'id': 2, 'name': 'Sumit' } ]
+// var b = [ { 'id': 3, 'name': 'Alex' }, { 'id': 4, 'name': 'John' } ]
+
+// Expected Output a = [ { 'id': 1, 'name': 'Pankaj Sharma' }, { 'id': 2, 'name': 'Sumit' }, { 'id': 3, 'name': 'Alex' }, { 'id': 4, 'name': 'John' } ]
+
+Array.prototype.push.apply(a, b);
+
+
+
+
