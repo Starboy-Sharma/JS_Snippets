@@ -125,4 +125,53 @@ Array.prototype.push.apply(a, b);
 
 
 
+let oneToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sixToTen = oneToTen.filter((a, index) => a > 5); // return [6, 7, 8, 9, 10];
+
+console.log(sixToTen);
+
+// String prototype.toUpperCase() | toLowerCase()
+
+let lowercaseString = "Hello, World!".toUpperCase(); // returns "hello, world!"
+
+console.log(lowercaseString);
+
+// String prototype.includes
+
+let data = "I don't want to go, I don't want to go. Mr. Stark , please."; // returns false.
+let tony = data.includes("Mr. Stark"); //returns true
+let peter = data.includes("Spiderman"); //return false
+
+console.log({ tony, peter });
+
+let demodata = [
+  {
+    title: "Ready Player One",
+    author: "Ernest Cline"
+  },
+  {
+    title: "The Circle",
+    author: "Dave Eggers"
+  },
+  {
+    title: "The Dark Knight",
+    author: "Dave Eggers"
+  }
+];
+
+console.log({ demodata });
+
+// What if I Want the index where title is the circle
+
+const author = "Dave Eggers";
+
+let filterData = demodata.filter((el, index) => {
+  return el.author.includes(author);
+});
+
+console.log(filterData);
+
+
+
+
 
