@@ -171,6 +171,19 @@ let filterData = demodata.filter((el, index) => {
 
 console.log(filterData);
 
+/*
+ * Get unique values from an array
+ */
+
+
+const duplicateCollection = ['A', 'B', 'B', 'C', 'D', 'B', 'C'];
+// If you want to turn the array into a Set
+let uniqueCollection = new Set(duplicateCollection);
+console.log(uniqueCollection) // Result: Set(4) {"A", "B", "C", "D"}
+// If you want to keep your values in an array
+uniqueCollection = [...new Set(duplicateCollection)];
+console.log(uniqueCollection) // Result: ["A", "B", "C", "D"]
+
 
 
 
